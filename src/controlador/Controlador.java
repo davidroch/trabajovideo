@@ -21,6 +21,7 @@ import vista.Agregar;
 import vista.Eliminar;
 import vista.Listar;
 import vista.MenuInicial;
+import vista.Consultas;
 
 public class Controlador implements ActionListener, MouseListener {
 
@@ -31,6 +32,7 @@ public class Controlador implements ActionListener, MouseListener {
     Agregar vistaAgregar = new Agregar();
     Listar vistalist = new Listar();
     Eliminar vistaelim = new Eliminar();
+    Consultas vistaConsulta = new Consultas();
     
     Pelicula pelicula = new Pelicula();
     /**
@@ -56,7 +58,15 @@ public class Controlador implements ActionListener, MouseListener {
         BtnEliminarListar,
         BtnVoleverListar,
         MenuSalir,
-        Btoagregarcategoria
+        Btoagregarcategoria,
+        BtnConsulta1,
+        BtnConsulta2,
+        BtnConsulta3,
+        BtnConsulta4,
+        BtnConsulta5,
+        BtnConsulta6,
+        BtnConsultaVolver
+       
         
 
     }
@@ -147,7 +157,25 @@ this.vistaAgregar.CboxPelicula.addItem("Seleccione categoría") ;
 ////this.vistaAgregar.CboxPelicula.setModel( new DefaultComboBoxModel());
 //
 //this.vistaAgregar.CboxPelicula.setModel(this.modelo.ComboBox());
-//    
+
+// Botones de la vista consulta  
+this.vistaConsulta.BtnConsulta1.setActionCommand("BtnConsulta1");
+this.vistaConsulta.BtnConsulta1.addActionListener(this);    
+
+this.vistaConsulta.BtnConsulta2.setActionCommand("BtnConsulta2");
+this.vistaConsulta.BtnConsulta2.addActionListener(this);  
+    
+this.vistaConsulta.BtnConsulta3.setActionCommand("BtnConsulta3");
+this.vistaConsulta.BtnConsulta3.addActionListener(this);
+this.vistaConsulta.BtnConsulta4.setActionCommand("BtnConsulta4");
+this.vistaConsulta.BtnConsulta4.addActionListener(this);
+this.vistaConsulta.BtnConsulta5.setActionCommand("BtnConsulta5");
+this.vistaConsulta.BtnConsulta5.addActionListener(this);
+this.vistaConsulta.BtnConsulta6.setActionCommand("BtnConsulta6");
+this.vistaConsulta.BtnConsulta6.addActionListener(this);
+
+this.vistaConsulta.BtnConsultaVolver.setActionCommand("BtnConsultaVolver");
+this.vistaConsulta.BtnConsultaVolver.addActionListener(this);
     }
     
     public void mousePressed(MouseEvent e) {

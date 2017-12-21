@@ -69,8 +69,10 @@ public class Modelo extends Conexion {
             }
             return false;
           }
-         
-      
+        //////////////////// 
+         String r= "INSERT INTO pelicula (10002,5000,'Drama','N','Los pollitos dicen')";
+          
+      ///////////////
      
          //Metodo para validar datos
     private boolean valida_datos(int codigo, int precio, String id_categoria, String formato4k, String nombre) {
