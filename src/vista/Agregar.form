@@ -94,7 +94,7 @@
                   <EmptySpace pref="24" max="32767" attributes="0"/>
               </Group>
               <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace min="0" pref="34" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="38" max="32767" attributes="0"/>
                   <Component id="Btoagregarcategoria" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
               </Group>
@@ -270,8 +270,14 @@
         <Component class="javax.swing.JComboBox" name="CboxPelicula">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="1">
-                <StringItem index="0" value="1"/>
+              <StringArray count="7">
+                <StringItem index="0" value="Elija Categoria"/>
+                <StringItem index="1" value="Drama"/>
+                <StringItem index="2" value="Terror"/>
+                <StringItem index="3" value="Acci&#xf3;n"/>
+                <StringItem index="4" value="Comic"/>
+                <StringItem index="5" value="Infantil"/>
+                <StringItem index="6" value="Documental"/>
               </StringArray>
             </Property>
           </Properties>

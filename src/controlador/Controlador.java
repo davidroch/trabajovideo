@@ -237,7 +237,7 @@ this.vistaAgregar.CboxPelicula.addItem("Seleccione categoría") ;
                 if (this.modelo.NuevoProducto(
                         Integer.parseInt(this.vistaAgregar.TxtCodigoPelicula.getText()),
                         Integer.parseInt(this.vistaAgregar.TxtPrecioPelicula.getText()),
-                        Integer.parseInt(this.vistaAgregar.CboxPelicula.getSelectedItem().toString()),
+                        this.vistaAgregar.CboxPelicula.getSelectedItem().toString(),
                         this.vistaAgregar.TxtFormato4kPelicula.getText(),
                         this.vistaAgregar.TxtNombrePelicula.getText())) {
                     JOptionPane.showMessageDialog(null, "Producto agregado correctamente");

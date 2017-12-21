@@ -22,14 +22,14 @@ public class Modelo extends Conexion {
     static ResultSet resultado;
     private ResultSet rs;
     private Statement st;
-     public boolean NuevoProducto(int codigo, int precio, int id_categoria, String formato4k, String nombre) {
+     public boolean NuevoProducto(int codigo, int precio, String id_categoria, String formato4k, String nombre) {
 //         ----> Validaciones que deben agregarse posteriormente. <--------
         if (valida_datos(codigo, precio, id_categoria, formato4k, nombre)) {
 
 //            Se arma la consulta
             String q = " INSERT INTO pelicula (codigo, precio,id_categoria,formato4k,nombre) "
-                    + "VALUES ( " + codigo + "," + precio + ", " + id_categoria
-                    + ",'" + formato4k + "','" + nombre + "') ";
+                    + "VALUES ( " + codigo + "," + precio + ", '" + id_categoria
+                    + "','" + formato4k + "','" + nombre + "') ";
 //            se ejecuta la consulta
 
             try {
@@ -73,7 +73,7 @@ public class Modelo extends Conexion {
       
      
          //Metodo para validar datos
-    private boolean valida_datos(int codigo, int precio, int id_categoria, String formato4k, String nombre) {
+    private boolean valida_datos(int codigo, int precio, String id_categoria, String formato4k, String nombre) {
         if (codigo > 99999 && codigo < 10000) {
             return false;
         } else if (nombre.length() > 2 && precio > 1000 && (formato4k.equals("S")||formato4k.equals("O"))) {
@@ -126,7 +126,7 @@ public class Modelo extends Conexion {
                 Pelicula pelicula = new Pelicula();
                 pelicula.setCodigo(rs.getInt("codigo"));
                 pelicula.setPrecio(rs.getInt("precio"));
-                pelicula.setId_categoria(rs.getInt("id_categoria"));
+                pelicula.setId_categoria(rs.getString("id_categoria"));
                 pelicula.setFormato4k(rs.getString("formato4k"));
                 pelicula.setNombre(rs.getString("nombre"));
                 listaPelicula.add(pelicula);
@@ -241,6 +241,7 @@ public class Modelo extends Conexion {
 //         CboxPelicula.addItem(resultado.get(i));
 //         
 //     }
+     
 //     public void agregarCategoria()throws SQLException{
 //         ArrayList<String> listacategoria = llenar_combo();
 //         for (int i=0;i<listacategoria.size();i++){

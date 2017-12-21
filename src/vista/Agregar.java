@@ -94,7 +94,7 @@ public class Agregar extends javax.swing.JFrame {
                         .addComponent(jLabel4)))
                 .addContainerGap(24, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(0, 34, Short.MAX_VALUE)
+                .addGap(0, 38, Short.MAX_VALUE)
                 .addComponent(Btoagregarcategoria)
                 .addGap(33, 33, 33))
         );
@@ -128,7 +128,7 @@ public class Agregar extends javax.swing.JFrame {
 
         jLabel9.setText("Categoría");
 
-        CboxPelicula.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1" }));
+        CboxPelicula.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Elija Categoria", "Drama", "Terror", "Acción", "Comic", "Infantil", "Documental" }));
         CboxPelicula.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
                 CboxPeliculaItemStateChanged(evt);

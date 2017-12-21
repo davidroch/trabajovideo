@@ -44,7 +44,7 @@ public class Conexion {
     /**
      * contraseña de MySql
      */
-    private String password = "8462";
+    private String password = "8162";
     /**
      * Cadena de conexion
      */

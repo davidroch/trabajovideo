@@ -5,14 +5,14 @@ import javax.swing.JOptionPane;
 public class Pelicula {
     int codigo;
     int precio;
-    int id_categoria;
+    String id_categoria;
     String formato4k;
     String nombre;
 
     public Pelicula() {
     }
 
-    public Pelicula(int codigo, int precio, int id_categoria, String formato4k, String nombre) {
+    public Pelicula(int codigo, int precio, String id_categoria, String formato4k, String nombre) {
         this.codigo = codigo;
         this.precio = precio;
         this.id_categoria = id_categoria;
@@ -39,11 +39,11 @@ public class Pelicula {
         this.precio = precio;
     }
 
-    public int getId_categoria() {
+    public String getId_categoria() {
         return id_categoria;
     }
 
-    public void setId_categoria(int id_categoria) {
+    public void setId_categoria(String id_categoria) {
         this.id_categoria = id_categoria;
     }
 
