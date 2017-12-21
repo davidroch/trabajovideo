@@ -65,7 +65,8 @@ public class Controlador implements ActionListener, MouseListener {
         BtnConsulta4,
         BtnConsulta5,
         BtnConsulta6,
-        BtnConsultaVolver
+        BtnConsultaVolver,
+        MenuConsulta
        
         
 
@@ -116,8 +117,11 @@ public class Controlador implements ActionListener, MouseListener {
         
         this.vista.MenuListar.setActionCommand("MenuListar");
         this.vista.MenuListar.addActionListener(this);
+        
+        this.vista.MenuConsulta.setActionCommand("MenuConsulta");
+        this.vista.MenuConsulta.addActionListener(this);
 
-        this.vista.MenuSalir.setActionCommand("MenItemSalir");
+        this.vista.MenuSalir.setActionCommand("MenuSalir");
         this.vista.MenuSalir.addActionListener(this);
 
         //---------------------------Botoneslistar--------------
@@ -216,16 +220,22 @@ this.vistaConsulta.BtnConsultaVolver.addActionListener(this);
                 this.vistaAgregar.setVisible(true);
                 this.vista.setVisible(false);
                 break;
-
+                
+                 case MenuConsulta:
+                this.vistaConsulta.setVisible(true);
+                this.vista.setVisible(false);
+                break;
+                
             case MenuSalir:
                 this.vista.dispose();
                 System.exit(0);
                 break;
                 
+          
+                
             case MenuListar:
                 this.vistalist.setVisible(true);
                 this.vistalist.TablaListarPelicula.setModel(this.modelo.ListadoProducto());
-
                 break;
 
             case BtnListarListar:
@@ -351,6 +361,22 @@ this.vistaConsulta.BtnConsultaVolver.addActionListener(this);
                     JOptionPane.showMessageDialog(null, "Pelicula no encontrada");
                 }
                 break;
+            case BtnConsulta1:
+                 if (this.modelo.NuevoProducto(10065,5000,"Drama","S","Titanic")
+                         ) {
+                    JOptionPane.showMessageDialog(null, "Producto agregado correctamente");
+                }else {JOptionPane.showMessageDialog(null, "Consulta no pudo realizarse");
+                
+                 }
+                break;
+                 
+            case BtnConsulta2:
+                 if (this.modelo.NuevoProducto(10055,5000,"Comedia","S","Pinguino")
+                         ) {
+                    JOptionPane.showMessageDialog(null, "Producto agregado correctamente");
+                }else {JOptionPane.showMessageDialog(null, "Consulta no pudo realizarse");    
+  
+                break;
 
         }
 
@@ -401,5 +427,6 @@ this.vistaConsulta.BtnConsultaVolver.addActionListener(this);
         }
         
    }
+}
 
 

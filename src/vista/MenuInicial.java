@@ -34,6 +34,7 @@ public class MenuInicial extends javax.swing.JFrame {
         MenuAgregar = new javax.swing.JMenuItem();
         MenuEliminar = new javax.swing.JMenuItem();
         MenuListar = new javax.swing.JMenuItem();
+        MenuConsulta = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -59,6 +60,9 @@ public class MenuInicial extends javax.swing.JFrame {
             }
         });
         Procesos.add(MenuListar);
+
+        MenuConsulta.setText("Consulta");
+        Procesos.add(MenuConsulta);
 
         jMenuBar1.add(Procesos);
 
@@ -119,6 +123,7 @@ public class MenuInicial extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JMenuItem MenuAgregar;
+    public javax.swing.JMenuItem MenuConsulta;
     public javax.swing.JMenuItem MenuEliminar;
     public javax.swing.JMenuItem MenuListar;
     public javax.swing.JMenuItem MenuSalir;
