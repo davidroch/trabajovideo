@@ -116,6 +116,21 @@ public class Modelo extends Conexion {
         return res;
     }
      
+     //eliminar pelicula
+     public boolean eliminarPrecio(int precio) {
+        boolean res = false;
+        String q = " DELETE FROM tiendapelicula.pelicula WHERE precio>=" + precio + " ";
+        try {
+            PreparedStatement pstm = getConexion().prepareStatement(q);
+            pstm.execute();
+            pstm.close();
+            res = true;
+        } catch (SQLException e) {
+            System.err.println(e.getMessage());
+        }
+        return res;
+    }
+     
       public ArrayList<Pelicula> buscarPorCodigo(String codigo) {
         ArrayList<Pelicula> listaPelicula = new ArrayList<Pelicula>();
         try {

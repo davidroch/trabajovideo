@@ -411,6 +411,14 @@ this.vistaConsulta.BtnConsultaVolver.addActionListener(this);
                     JOptionPane.showMessageDialog(null, "Pelicula no encontrada");
                 }
                 break;
+                
+            case BtnConsulta5:
+                int precio1 = 2000;
+                this.modelo.eliminarPrecio(precio1);
+                  {
+                    this.vistalist.TablaListarPelicula.setModel(this.modelo.ListadoProducto()); //actualiza JTable
+                    JOptionPane.showMessageDialog(null, "Producto eliminar");}
+                break;
                                   
 ////            String codigo3 = vistalist.TxtCodigoListar.getText();            
 ////    if ("".equals(codigo3)){
