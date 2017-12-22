@@ -66,6 +66,7 @@ public class Controlador implements ActionListener, MouseListener {
         BtnConsulta5,
         BtnConsulta6,
         BtnConsultaVolver,
+        BtnLimpiarCasillas,
         MenuConsulta
        
         
@@ -180,6 +181,10 @@ this.vistaConsulta.BtnConsulta6.addActionListener(this);
 
 this.vistaConsulta.BtnConsultaVolver.setActionCommand("BtnConsultaVolver");
 this.vistaConsulta.BtnConsultaVolver.addActionListener(this);
+
+this.vistaAgregar.BtnLimpiarCasillas.setActionCommand("BtnLimpiarCasillas");
+this.vistaAgregar.BtnLimpiarCasillas.addActionListener(this);
+
     }
     
     public void mousePressed(MouseEvent e) {
@@ -281,11 +286,11 @@ this.vistaConsulta.BtnConsultaVolver.addActionListener(this);
                     JOptionPane.showMessageDialog(null, "Producto agregado correctamente");
                 }
 
-                this.vistaAgregar.TxtCodigoPelicula.setText("");
-                this.vistaAgregar.TxtPrecioPelicula.setText("");
-                this.vistaAgregar.TxtFormato4kPelicula.setText("");
-                this.vistaAgregar.TxtNombrePelicula.setText("");
-                this.vistaAgregar.CboxPelicula.setSelectedIndex(0);
+//                this.vistaAgregar.TxtCodigoPelicula.setText("");
+//                this.vistaAgregar.TxtPrecioPelicula.setText("");
+//                this.vistaAgregar.TxtFormato4kPelicula.setText("");
+//                this.vistaAgregar.TxtNombrePelicula.setText("");
+//                this.vistaAgregar.CboxPelicula.setSelectedIndex(0);
                 break;
                 
             case Btoagregarcategoria:
@@ -377,10 +382,31 @@ this.vistaConsulta.BtnConsultaVolver.addActionListener(this);
                 }else {JOptionPane.showMessageDialog(null, "Consulta no pudo realizarse");    
   
                 break;
-
-        }
-
-                                        
+                }
+            case BtnConsulta3:
+                this.vistaAgregar.setVisible(true);
+                this.vistaConsulta.setVisible(false);
+                    //Limpiamos textField
+                    this.vistaAgregar.TxtCodigoPelicula.setText("");
+                    this.vistaAgregar.TxtPrecioPelicula.setText("");
+                    this.vistaAgregar.TxtFormato4kPelicula.setText("");
+                    this.vistaAgregar.TxtNombrePelicula.setText("");
+                    this.vistaAgregar.CboxPelicula.setSelectedIndex(0);
+                    this.vistaAgregar.TxtCodigoPelicula.setFocusable(true);
+                    break;
+                
+///////////////////////////////////////////////////////////                 
+            case BtnLimpiarCasillas:
+                     
+                    //Limpiamos textField
+                    this.vistaAgregar.TxtCodigoPelicula.setText("");
+                    this.vistaAgregar.TxtPrecioPelicula.setText("");
+                    this.vistaAgregar.TxtFormato4kPelicula.setText("");
+                    this.vistaAgregar.TxtNombrePelicula.setText("");
+                    this.vistaAgregar.CboxPelicula.setSelectedIndex(0);
+                    break;
+                
+//////////////////////////////////////////////////////////////                                        
 ////            String codigo3 = vistalist.TxtCodigoListar.getText();            
 ////    if ("".equals(codigo3)){
 ////        JOptionPane.showMessageDialog(null, "Debe Ingresar un codigo");}

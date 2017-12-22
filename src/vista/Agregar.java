@@ -58,7 +58,7 @@ public class Agregar extends javax.swing.JFrame {
         TxtCodigoPelicula = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
         BtnAgregaraAgregar = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        BtnLimpiarCasillas = new javax.swing.JButton();
         BtnVolverAgregar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -69,9 +69,14 @@ public class Agregar extends javax.swing.JFrame {
 
         jLabel2.setText("Id");
 
+        TxtidCAT.setFocusable(false);
+
+        TxtcategoriaCAT.setFocusable(false);
+
         jLabel4.setText("Agregar Categoría");
 
         Btoagregarcategoria.setText("Agregar categoria");
+        Btoagregarcategoria.setFocusable(false);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -135,9 +140,31 @@ public class Agregar extends javax.swing.JFrame {
             }
         });
 
+        TxtNombrePelicula.setText("uuuuu");
+        TxtNombrePelicula.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TxtNombrePeliculaActionPerformed(evt);
+            }
+        });
+
+        TxtFormato4kPelicula.setText("S");
         TxtFormato4kPelicula.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TxtFormato4kPeliculaActionPerformed(evt);
+            }
+        });
+
+        TxtPrecioPelicula.setText("56456");
+        TxtPrecioPelicula.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TxtPrecioPeliculaActionPerformed(evt);
+            }
+        });
+
+        TxtCodigoPelicula.setText("56456");
+        TxtCodigoPelicula.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TxtCodigoPeliculaActionPerformed(evt);
             }
         });
 
@@ -145,7 +172,7 @@ public class Agregar extends javax.swing.JFrame {
 
         BtnAgregaraAgregar.setText("Agregar Pelicula");
 
-        jButton1.setText("Limpiar Casillas");
+        BtnLimpiarCasillas.setText("Limpiar Casillas");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -179,7 +206,7 @@ public class Agregar extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jButton1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(BtnLimpiarCasillas, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(BtnAgregaraAgregar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addGap(18, 18, 18))
         );
@@ -211,7 +238,7 @@ public class Agregar extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(BtnAgregaraAgregar)
                 .addGap(18, 18, 18)
-                .addComponent(jButton1)
+                .addComponent(BtnLimpiarCasillas)
                 .addContainerGap(19, Short.MAX_VALUE))
         );
 
@@ -257,6 +284,18 @@ public class Agregar extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_CboxPeliculaItemStateChanged
 
+    private void TxtCodigoPeliculaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtCodigoPeliculaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TxtCodigoPeliculaActionPerformed
+
+    private void TxtNombrePeliculaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtNombrePeliculaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TxtNombrePeliculaActionPerformed
+
+    private void TxtPrecioPeliculaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtPrecioPeliculaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TxtPrecioPeliculaActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -294,6 +333,7 @@ public class Agregar extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton BtnAgregaraAgregar;
+    public javax.swing.JButton BtnLimpiarCasillas;
     public javax.swing.JButton BtnVolverAgregar;
     public javax.swing.JButton Btoagregarcategoria;
     public javax.swing.JComboBox<String> CboxPelicula;
@@ -303,7 +343,6 @@ public class Agregar extends javax.swing.JFrame {
     public javax.swing.JTextField TxtPrecioPelicula;
     public javax.swing.JTextField TxtcategoriaCAT;
     public javax.swing.JTextField TxtidCAT;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;

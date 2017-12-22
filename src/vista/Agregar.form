@@ -133,11 +133,17 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="TxtidCAT">
+          <Properties>
+            <Property name="focusable" type="boolean" value="false"/>
+          </Properties>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
           </AuxValues>
         </Component>
         <Component class="javax.swing.JTextField" name="TxtcategoriaCAT">
+          <Properties>
+            <Property name="focusable" type="boolean" value="false"/>
+          </Properties>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
           </AuxValues>
@@ -150,6 +156,7 @@
         <Component class="javax.swing.JButton" name="Btoagregarcategoria">
           <Properties>
             <Property name="text" type="java.lang.String" value="Agregar categoria"/>
+            <Property name="focusable" type="boolean" value="false"/>
           </Properties>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
@@ -204,7 +211,7 @@
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="jButton1" alignment="1" max="32767" attributes="0"/>
+                              <Component id="BtnLimpiarCasillas" alignment="1" max="32767" attributes="0"/>
                               <Component id="BtnAgregaraAgregar" alignment="1" max="32767" attributes="0"/>
                           </Group>
                       </Group>
@@ -246,7 +253,7 @@
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="BtnAgregaraAgregar" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                  <Component id="BtnLimpiarCasillas" min="-2" max="-2" attributes="0"/>
                   <EmptySpace pref="19" max="32767" attributes="0"/>
               </Group>
           </Group>
@@ -303,11 +310,20 @@
           </AuxValues>
         </Component>
         <Component class="javax.swing.JTextField" name="TxtNombrePelicula">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="uuuuu"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TxtNombrePeliculaActionPerformed"/>
+          </Events>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
           </AuxValues>
         </Component>
         <Component class="javax.swing.JTextField" name="TxtFormato4kPelicula">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="S"/>
+          </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TxtFormato4kPeliculaActionPerformed"/>
           </Events>
@@ -316,11 +332,23 @@
           </AuxValues>
         </Component>
         <Component class="javax.swing.JTextField" name="TxtPrecioPelicula">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="56456"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TxtPrecioPeliculaActionPerformed"/>
+          </Events>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
           </AuxValues>
         </Component>
         <Component class="javax.swing.JTextField" name="TxtCodigoPelicula">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="56456"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TxtCodigoPeliculaActionPerformed"/>
+          </Events>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
           </AuxValues>
@@ -338,10 +366,13 @@
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
           </AuxValues>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton1">
+        <Component class="javax.swing.JButton" name="BtnLimpiarCasillas">
           <Properties>
             <Property name="text" type="java.lang.String" value="Limpiar Casillas"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
         </Component>
       </SubComponents>
     </Container>

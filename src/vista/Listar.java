@@ -81,7 +81,7 @@ public class Listar extends javax.swing.JFrame {
 
         jLabel6.setText("Categoría");
 
-        CboxCategoriaListar.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1" }));
+        CboxCategoriaListar.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Elija Categoria", "Drama", "Terror", "Acción", "Comedia", "Infantil", "Documental", "Romance" }));
 
         BtnModificar.setText("Modificar");
 
