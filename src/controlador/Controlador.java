@@ -379,10 +379,11 @@ this.vistaAgregar.BtnLimpiarCasillas.addActionListener(this);
                  if (this.modelo.NuevoProducto(10055,5000,"Comedia","S","Pinguino")
                          ) {
                     JOptionPane.showMessageDialog(null, "Producto agregado correctamente");
-                }else {JOptionPane.showMessageDialog(null, "Consulta no pudo realizarse");    
+                }else {JOptionPane.showMessageDialog(null, "Consulta no pudo realizarse"); }   
   
                 break;
-                }
+
+                
             case BtnConsulta3:
                 this.vistaAgregar.setVisible(true);
                 this.vistaConsulta.setVisible(false);
@@ -406,7 +407,49 @@ this.vistaAgregar.BtnLimpiarCasillas.addActionListener(this);
                     this.vistaAgregar.CboxPelicula.setSelectedIndex(0);
                     break;
                 
-//////////////////////////////////////////////////////////////                                        
+
+                 
+            case BtnConsulta4:
+                this.vistalist.setVisible(true);
+                this.vistaConsulta.setVisible(false);
+                                try {
+                    String Categoria = "Romance";
+
+                    DefaultTableModel modeloT = new DefaultTableModel();
+                    vistalist.TablaListarPelicula.setModel(modeloT);
+
+                    modeloT.addColumn("Codigo");
+                    modeloT.addColumn("Precio");
+                    modeloT.addColumn("Categoria");
+                    modeloT.addColumn("Formato4K");
+                    modeloT.addColumn("Nombre");
+
+                    Object[] columna = new Object[5];
+
+                    int numRegistros = modelo.buscarPorCategoria(Categoria).size();
+
+                    for (int i = 0; i < numRegistros; i++) {
+                        columna[0] = modelo.buscarPorCategoria(Categoria).get(i).getCodigo();
+                        columna[1] = modelo.buscarPorCategoria(Categoria).get(i).getPrecio();
+                        columna[2] = modelo.buscarPorCategoria(Categoria).get(i).getId_categoria();
+                        columna[3] = modelo.buscarPorCategoria(Categoria).get(i).getFormato4k();
+                        columna[4] = modelo.buscarPorCategoria(Categoria).get(i).getNombre();
+                        modeloT.addRow(columna);
+                    }
+                } catch (Exception ex) {
+                    JOptionPane.showMessageDialog(null, "Pelicula no encontrada");
+                }
+                break;
+                
+            case BtnConsulta5:
+                int precio1 = 2000;
+                this.modelo.eliminarPrecio(precio1);
+                  {
+                    this.vistalist.TablaListarPelicula.setModel(this.modelo.ListadoProducto()); //actualiza JTable
+                    JOptionPane.showMessageDialog(null, "Producto eliminar");}
+                break;
+                                  
+
 ////            String codigo3 = vistalist.TxtCodigoListar.getText();            
 ////    if ("".equals(codigo3)){
 ////        JOptionPane.showMessageDialog(null, "Debe Ingresar un codigo");}

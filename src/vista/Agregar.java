@@ -168,6 +168,12 @@ public class Agregar extends javax.swing.JFrame {
             }
         });
 
+        TxtCodigoPelicula.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                TxtCodigoPeliculaFocusGained(evt);
+            }
+        });
+
         jLabel10.setText("Agregar Película");
 
         BtnAgregaraAgregar.setText("Agregar Pelicula");
@@ -295,6 +301,10 @@ public class Agregar extends javax.swing.JFrame {
     private void TxtPrecioPeliculaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtPrecioPeliculaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_TxtPrecioPeliculaActionPerformed
+
+    private void TxtCodigoPeliculaFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_TxtCodigoPeliculaFocusGained
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TxtCodigoPeliculaFocusGained
 
     /**
      * @param args the command line arguments

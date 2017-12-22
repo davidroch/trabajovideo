@@ -116,6 +116,21 @@ public class Modelo extends Conexion {
         return res;
     }
      
+     //eliminar pelicula
+     public boolean eliminarPrecio(int precio) {
+        boolean res = false;
+        String q = " DELETE FROM tiendapelicula.pelicula WHERE precio>=" + precio + " ";
+        try {
+            PreparedStatement pstm = getConexion().prepareStatement(q);
+            pstm.execute();
+            pstm.close();
+            res = true;
+        } catch (SQLException e) {
+            System.err.println(e.getMessage());
+        }
+        return res;
+    }
+     
       public ArrayList<Pelicula> buscarPorCodigo(String codigo) {
         ArrayList<Pelicula> listaPelicula = new ArrayList<Pelicula>();
         try {
@@ -140,6 +155,32 @@ public class Modelo extends Conexion {
         }
         return listaPelicula;
     }
+      
+            public ArrayList<Pelicula> buscarPorCategoria(String id_categoria) {
+        ArrayList<Pelicula> listaCategoria = new ArrayList<Pelicula>();
+        try {
+            Connection conexion = getConexion();
+            String query = "SELECT codigo,precio,id_categoria,formato4k,nombre From pelicula where id_categoria=?";
+            PreparedStatement buscarPorCategoria = conexion.prepareStatement(query);
+            buscarPorCategoria.setString(1, id_categoria);
+            ResultSet rs = buscarPorCategoria.executeQuery();
+            while (rs.next()) {
+                Pelicula pelicula = new Pelicula();
+                pelicula.setCodigo(rs.getInt("codigo"));
+                pelicula.setPrecio(rs.getInt("precio"));
+                pelicula.setId_categoria(rs.getString("id_categoria"));
+                pelicula.setFormato4k(rs.getString("formato4k"));
+                pelicula.setNombre(rs.getString("nombre"));
+                listaCategoria.add(pelicula);
+            }
+        } catch (SQLException s) {
+            System.out.println("Error SQL al listar pelicula" + s.getMessage());
+        } catch (Exception e) {
+            System.out.println("Error al listar pelicula" + e.getMessage());
+        }
+        return listaCategoria;
+    }
+
 
      
   public DefaultTableModel ListadoProducto() {
