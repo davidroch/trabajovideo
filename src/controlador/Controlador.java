@@ -33,7 +33,7 @@ public class Controlador implements ActionListener, MouseListener {
     Listar vistalist = new Listar();
     Eliminar vistaelim = new Eliminar();
     Consultas vistaConsulta = new Consultas();
-    
+
     Pelicula pelicula = new Pelicula();
     /**
      * instancia a nuestro modelo
@@ -68,8 +68,6 @@ public class Controlador implements ActionListener, MouseListener {
         BtnConsultaVolver,
         BtnLimpiarCasillas,
         MenuConsulta
-       
-        
 
     }
 
@@ -103,22 +101,21 @@ public class Controlador implements ActionListener, MouseListener {
         //declara una acción y añade un escucha al evento producido por el componente
         this.vistaAgregar.BtnVolverAgregar.setActionCommand("BtnVolverAgregar");
         this.vistaAgregar.BtnVolverAgregar.addActionListener(this);
-        
+
         this.vistaAgregar.Btoagregarcategoria.setActionCommand("Btoagregarcategoria");
         this.vistaAgregar.Btoagregarcategoria.addActionListener(this);
 
         // ----------------------------------------------------------
-        
         //declara una acción y añade un escucha al evento producido por el componente menu
         this.vista.MenuAgregar.setActionCommand("MenuAgregar");
         this.vista.MenuAgregar.addActionListener(this);
 
         this.vista.MenuEliminar.setActionCommand("MenuEliminar");
         this.vista.MenuEliminar.addActionListener(this);
-        
+
         this.vista.MenuListar.setActionCommand("MenuListar");
         this.vista.MenuListar.addActionListener(this);
-        
+
         this.vista.MenuConsulta.setActionCommand("MenuConsulta");
         this.vista.MenuConsulta.addActionListener(this);
 
@@ -141,7 +138,7 @@ public class Controlador implements ActionListener, MouseListener {
 
         this.vistalist.BtnModificar.setActionCommand("BtnModificar");
         this.vistalist.BtnModificar.addActionListener(this);
-        
+
         this.vistalist.BtnBuscarListar.setActionCommand("BtnBuscarListar");
         this.vistalist.BtnBuscarListar.addActionListener(this);
 
@@ -150,9 +147,9 @@ public class Controlador implements ActionListener, MouseListener {
         this.vistaelim.BtnEliminareliminar.addActionListener(this);
 //        this.vistalist.TxtCodigo.setEnabled(false);
 
-this.vistaAgregar.CboxPelicula.setActionCommand("CboxPelicula");
-this.vistaAgregar.CboxPelicula.addActionListener(this);
-this.vistaAgregar.CboxPelicula.addItem("Seleccione categoría") ;
+        this.vistaAgregar.CboxPelicula.setActionCommand("CboxPelicula");
+        this.vistaAgregar.CboxPelicula.addActionListener(this);
+        this.vistaAgregar.CboxPelicula.addItem("Seleccione categoría");
 //this.vistaAgregar.CboxPelicula.addItem();
 //this.vistalist.CboxCategoriaListar.removCategoriaeAllItems();
 ////        ArrayList<String> listacategoria = new ArrayList<String>();
@@ -164,29 +161,29 @@ this.vistaAgregar.CboxPelicula.addItem("Seleccione categoría") ;
 //this.vistaAgregar.CboxPelicula.setModel(this.modelo.ComboBox());
 
 // Botones de la vista consulta  
-this.vistaConsulta.BtnConsulta1.setActionCommand("BtnConsulta1");
-this.vistaConsulta.BtnConsulta1.addActionListener(this);    
+        this.vistaConsulta.BtnConsulta1.setActionCommand("BtnConsulta1");
+        this.vistaConsulta.BtnConsulta1.addActionListener(this);
 
-this.vistaConsulta.BtnConsulta2.setActionCommand("BtnConsulta2");
-this.vistaConsulta.BtnConsulta2.addActionListener(this);  
-    
-this.vistaConsulta.BtnConsulta3.setActionCommand("BtnConsulta3");
-this.vistaConsulta.BtnConsulta3.addActionListener(this);
-this.vistaConsulta.BtnConsulta4.setActionCommand("BtnConsulta4");
-this.vistaConsulta.BtnConsulta4.addActionListener(this);
-this.vistaConsulta.BtnConsulta5.setActionCommand("BtnConsulta5");
-this.vistaConsulta.BtnConsulta5.addActionListener(this);
-this.vistaConsulta.BtnConsulta6.setActionCommand("BtnConsulta6");
-this.vistaConsulta.BtnConsulta6.addActionListener(this);
+        this.vistaConsulta.BtnConsulta2.setActionCommand("BtnConsulta2");
+        this.vistaConsulta.BtnConsulta2.addActionListener(this);
 
-this.vistaConsulta.BtnConsultaVolver.setActionCommand("BtnConsultaVolver");
-this.vistaConsulta.BtnConsultaVolver.addActionListener(this);
+        this.vistaConsulta.BtnConsulta3.setActionCommand("BtnConsulta3");
+        this.vistaConsulta.BtnConsulta3.addActionListener(this);
+        this.vistaConsulta.BtnConsulta4.setActionCommand("BtnConsulta4");
+        this.vistaConsulta.BtnConsulta4.addActionListener(this);
+        this.vistaConsulta.BtnConsulta5.setActionCommand("BtnConsulta5");
+        this.vistaConsulta.BtnConsulta5.addActionListener(this);
+        this.vistaConsulta.BtnConsulta6.setActionCommand("BtnConsulta6");
+        this.vistaConsulta.BtnConsulta6.addActionListener(this);
 
-this.vistaAgregar.BtnLimpiarCasillas.setActionCommand("BtnLimpiarCasillas");
-this.vistaAgregar.BtnLimpiarCasillas.addActionListener(this);
+        this.vistaConsulta.BtnConsultaVolver.setActionCommand("BtnConsultaVolver");
+        this.vistaConsulta.BtnConsultaVolver.addActionListener(this);
+
+        this.vistaAgregar.BtnLimpiarCasillas.setActionCommand("BtnLimpiarCasillas");
+        this.vistaAgregar.BtnLimpiarCasillas.addActionListener(this);
 
     }
-    
+
     public void mousePressed(MouseEvent e) {
     }
 
@@ -194,11 +191,10 @@ this.vistaAgregar.BtnLimpiarCasillas.addActionListener(this);
     }
 
     public void mouseClicked(MouseEvent e) {
-        
 
         if (e.getButton() == 1)//boton izquierdo
         {
-            
+
             //Muestro datos de producto a modificar
             int fila = this.vistalist.TablaListarPelicula.rowAtPoint(e.getPoint());
             if (fila > -1) {
@@ -207,14 +203,16 @@ this.vistaAgregar.BtnLimpiarCasillas.addActionListener(this);
                 this.vistalist.CboxCategoriaListar.setSelectedItem(String.valueOf(this.vistalist.TablaListarPelicula.getValueAt(fila, 2)));
                 this.vistalist.TxtFormato4kListar.setText(String.valueOf(this.vistalist.TablaListarPelicula.getValueAt(fila, 3)));
                 this.vistalist.TxtnombreListar.setText(String.valueOf(this.vistalist.TablaListarPelicula.getValueAt(fila, 4)));
-             
+
             }
         }
     }
-    
-    public void mouseEntered(MouseEvent e) {}
 
-    public void mouseExited(MouseEvent e) { }
+    public void mouseEntered(MouseEvent e) {
+    }
+
+    public void mouseExited(MouseEvent e) {
+    }
 
     //Control de eventos de los controles que tienen definido un "ActionCommand"
     public void actionPerformed(ActionEvent e) {
@@ -225,19 +223,17 @@ this.vistaAgregar.BtnLimpiarCasillas.addActionListener(this);
                 this.vistaAgregar.setVisible(true);
                 this.vista.setVisible(false);
                 break;
-                
-                 case MenuConsulta:
+
+            case MenuConsulta:
                 this.vistaConsulta.setVisible(true);
                 this.vista.setVisible(false);
                 break;
-                
+
             case MenuSalir:
                 this.vista.dispose();
                 System.exit(0);
                 break;
-                
-          
-                
+
             case MenuListar:
                 this.vistalist.setVisible(true);
                 this.vistalist.TablaListarPelicula.setModel(this.modelo.ListadoProducto());
@@ -292,12 +288,12 @@ this.vistaAgregar.BtnLimpiarCasillas.addActionListener(this);
 //                this.vistaAgregar.TxtNombrePelicula.setText("");
 //                this.vistaAgregar.CboxPelicula.setSelectedIndex(0);
                 break;
-                
+
             case Btoagregarcategoria:
-                 if (this.modelo.NuevoCategoria(
+                if (this.modelo.NuevoCategoria(
                         Integer.parseInt(this.vistaAgregar.TxtidCAT.getText()),
                         this.vistaAgregar.TxtcategoriaCAT.getText()
-                        )) {
+                )) {
                     JOptionPane.showMessageDialog(null, "Categoria agregado correctamente");
                 }
 
@@ -305,8 +301,6 @@ this.vistaAgregar.BtnLimpiarCasillas.addActionListener(this);
                 this.vistaAgregar.TxtcategoriaCAT.setText("");
 
                 break;
-
-                
 
             case BtnEliminareliminar:
                 int codigo1;
@@ -367,52 +361,50 @@ this.vistaAgregar.BtnLimpiarCasillas.addActionListener(this);
                 }
                 break;
             case BtnConsulta1:
-                 if (this.modelo.NuevoProducto(10065,5000,"Drama","S","Titanic")
-                         ) {
+                if (this.modelo.NuevoProducto(10065, 5000, "Drama", "S", "Titanic")) {
                     JOptionPane.showMessageDialog(null, "Producto agregado correctamente");
-                }else {JOptionPane.showMessageDialog(null, "Consulta no pudo realizarse");
-                
-                 }
-                break;
-                 
-            case BtnConsulta2:
-                 if (this.modelo.NuevoProducto(10055,5000,"Comedia","S","Pinguino")
-                         ) {
-                    JOptionPane.showMessageDialog(null, "Producto agregado correctamente");
-                }else {JOptionPane.showMessageDialog(null, "Consulta no pudo realizarse"); }   
-  
+                } else {
+                    JOptionPane.showMessageDialog(null, "Consulta no pudo realizarse");
+
+                }
                 break;
 
-                
+            case BtnConsulta2:
+                if (this.modelo.NuevoProducto(10055, 5000, "Comedia", "S", "Pinguino")) {
+                    JOptionPane.showMessageDialog(null, "Producto agregado correctamente");
+                } else {
+                    JOptionPane.showMessageDialog(null, "Consulta no pudo realizarse");
+                }
+
+                break;
+
             case BtnConsulta3:
                 this.vistaAgregar.setVisible(true);
                 this.vistaConsulta.setVisible(false);
-                    //Limpiamos textField
-                    this.vistaAgregar.TxtCodigoPelicula.setText("");
-                    this.vistaAgregar.TxtPrecioPelicula.setText("");
-                    this.vistaAgregar.TxtFormato4kPelicula.setText("");
-                    this.vistaAgregar.TxtNombrePelicula.setText("");
-                    this.vistaAgregar.CboxPelicula.setSelectedIndex(0);
-                    this.vistaAgregar.TxtCodigoPelicula.setFocusable(true);
-                    break;
-                
+                //Limpiamos textField
+                this.vistaAgregar.TxtCodigoPelicula.setText("");
+                this.vistaAgregar.TxtPrecioPelicula.setText("");
+                this.vistaAgregar.TxtFormato4kPelicula.setText("");
+                this.vistaAgregar.TxtNombrePelicula.setText("");
+                this.vistaAgregar.CboxPelicula.setSelectedIndex(0);
+                this.vistaAgregar.TxtCodigoPelicula.setFocusable(true);
+                break;
+
 ///////////////////////////////////////////////////////////                 
             case BtnLimpiarCasillas:
-                     
-                    //Limpiamos textField
-                    this.vistaAgregar.TxtCodigoPelicula.setText("");
-                    this.vistaAgregar.TxtPrecioPelicula.setText("");
-                    this.vistaAgregar.TxtFormato4kPelicula.setText("");
-                    this.vistaAgregar.TxtNombrePelicula.setText("");
-                    this.vistaAgregar.CboxPelicula.setSelectedIndex(0);
-                    break;
-                
 
-                 
+                //Limpiamos textField
+                this.vistaAgregar.TxtCodigoPelicula.setText("");
+                this.vistaAgregar.TxtPrecioPelicula.setText("");
+                this.vistaAgregar.TxtFormato4kPelicula.setText("");
+                this.vistaAgregar.TxtNombrePelicula.setText("");
+                this.vistaAgregar.CboxPelicula.setSelectedIndex(0);
+                break;
+
             case BtnConsulta4:
                 this.vistalist.setVisible(true);
                 this.vistaConsulta.setVisible(false);
-                                try {
+                try {
                     String Categoria = "Romance";
 
                     DefaultTableModel modeloT = new DefaultTableModel();
@@ -440,15 +432,23 @@ this.vistaAgregar.BtnLimpiarCasillas.addActionListener(this);
                     JOptionPane.showMessageDialog(null, "Pelicula no encontrada");
                 }
                 break;
-                
+
             case BtnConsulta5:
                 int precio1 = 2000;
                 this.modelo.eliminarPrecio(precio1);
-                  {
+                 {
                     this.vistalist.TablaListarPelicula.setModel(this.modelo.ListadoProducto()); //actualiza JTable
-                    JOptionPane.showMessageDialog(null, "Producto eliminar");}
+                    JOptionPane.showMessageDialog(null, "Producto eliminar");
+                }
                 break;
-                                  
+
+            case BtnConsulta6:
+            if (this.modelo.modificaPelicula1());
+            { JOptionPane.showMessageDialog(null, "Producto modificado");
+                }
+
+                break;
+                
 
 ////            String codigo3 = vistalist.TxtCodigoListar.getText();            
 ////    if ("".equals(codigo3)){

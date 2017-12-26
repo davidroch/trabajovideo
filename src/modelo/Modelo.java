@@ -78,7 +78,7 @@ public class Modelo extends Conexion {
     private boolean valida_datos(int codigo, int precio, String id_categoria, String formato4k, String nombre) {
         if (codigo > 99999 && codigo < 10000) {
             return false;
-        } else if (nombre.length() > 2 && precio > 1000 && (formato4k.equals("S")||formato4k.equals("O"))) {
+        } else if (nombre.length() > 2 && precio > 1000 && (formato4k.equals("S")||formato4k.equals("N"))) {
 
             return true;
         } else {
@@ -216,8 +216,20 @@ public class Modelo extends Conexion {
             System.err.println(e.getMessage());
         }
         return tablemodel;
+        
     } 
-
+        public boolean modificaPelicula1() {
+        String q = "UPDATE tiendapelicula.pelicula SET nombre= CONCAT('P',nombre)";
+        try {
+            PreparedStatement pstm = this.getConexion().prepareStatement(q);
+            pstm.execute();
+            pstm.close();
+            return true;
+        } catch (SQLException e) {
+            System.err.println(e.getMessage());
+        }
+        return false;
+        }
 
 //  
 //   public DefaultTableModel BuscarCodigo(String codigo) {
